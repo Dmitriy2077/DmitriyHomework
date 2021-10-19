@@ -10,32 +10,31 @@ import java.util.Scanner;
  */
 
 public class Lesson1_2Task1 {
-
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         System.out.print("Enter the number for checking: ");
-        int numberForCheck = scanner.nextInt();
+        int checkNumber = scanner.nextInt();
 
-        String typeOfNumber = "zero.";
-        int counterForNumberSize = 0;
-        int temporaryCopyOfNumber = numberForCheck;
+        String numberType = "zero.";
+        int numberSizeCounter = 0;
+        int temporaryNumberCopy = checkNumber;
 
-        while (temporaryCopyOfNumber != 0) {
-            temporaryCopyOfNumber /= 10;
-            counterForNumberSize++;
+        while (temporaryNumberCopy != 0) {
+            temporaryNumberCopy /= 10;
+            numberSizeCounter++;
         }
 
-        if (numberForCheck > 0) {
-            typeOfNumber = "positive ";
-            System.out.println(numberForCheck + " is " + typeOfNumber + counterForNumberSize + "-digit number.");
+        if (checkNumber > 0) {
+            numberType = "positive ";
+            System.out.println(checkNumber + " is " + numberType + numberSizeCounter + "-digit number.");
         }
-        else if (numberForCheck < 0) {
-            typeOfNumber = "negative ";
-            System.out.println(numberForCheck + " is " + typeOfNumber + counterForNumberSize + "-digit number.");
+        else if (checkNumber < 0) {
+            numberType = "negative ";
+            System.out.println(checkNumber + " is " + numberType + numberSizeCounter + "-digit number.");
         }
         else {
-            System.out.println(numberForCheck + " is " + typeOfNumber);
+            System.out.println(checkNumber + " is " + numberType);
         }
     }
 }

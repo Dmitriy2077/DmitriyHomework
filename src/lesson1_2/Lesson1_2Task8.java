@@ -7,22 +7,34 @@ import java.util.Scanner;
  */
 
 public class Lesson1_2Task8 {
-
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         System.out.print("Enter the message => ");
-        String messageForResearch = scanner.next();
+        String researchMessage = scanner.next();
+        char[] messageCharacters = researchMessage.toCharArray();
 
-        for (int i = 0; i < messageForResearch.length(); i++) {
-            for (int j = i + 1; j < messageForResearch.length(); j++) {
-                if (messageForResearch.charAt(i) == messageForResearch.charAt(j)) {
-                    System.out.println("First repeated character is " + messageForResearch.charAt(i));
-                    return;
+        if (firstRepeating(messageCharacters) != ' ')
+            System.out.println("First repeated character is " + firstRepeating(messageCharacters));
+        else
+            System.out.println("No repeating characters.");
+    }
+
+    static char firstRepeating(char[] inputMessage) {
+        char[] messageCharacters = new char[inputMessage.length];
+
+        for (int i = 0; i <= inputMessage.length - 1; i++) {
+            char researchCharacter = inputMessage[i];
+
+            for (int j = 0; j <= messageCharacters.length; j++) {
+                if (researchCharacter == messageCharacters[j])
+                    return researchCharacter;
+                else if (j == messageCharacters.length - 1) {
+                    messageCharacters[i] = researchCharacter;
+                    break;
                 }
             }
         }
-        System.out.println("No repeating characters.");
+        return ' ';
     }
-
 }

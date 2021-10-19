@@ -8,30 +8,24 @@ import java.util.Scanner;
  */
 
 public class Lesson1_2Task4 {
-
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int[] numbersForCheck = new int[3];
+        int[] checkNumbers = new int[3];
 
         System.out.print("Enter 3 numbers:\nFirst number = ");
-        numbersForCheck[0] = scanner.nextInt();
+        checkNumbers[0] = scanner.nextInt();
         System.out.print("Second number = ");
-        numbersForCheck[1] = scanner.nextInt();
+        checkNumbers[1] = scanner.nextInt();
         System.out.print("Third number = ");
-        numbersForCheck[2] = scanner.nextInt();
+        checkNumbers[2] = scanner.nextInt();
 
-        int counterOfPositiveNumbers = 0;
+        int positiveNumbersCounter = 0;
 
-        for (int i : numbersForCheck)
-            if (isPositive(i)) {
-                counterOfPositiveNumbers++;
+        for (int i : checkNumbers)
+            if (i > 0) {
+                positiveNumbersCounter++;
             }
-
-        System.out.println("Quantity of positive numbers = " + counterOfPositiveNumbers);
-    }
-
-    private static boolean isPositive(int sourceNumber) {
-        return sourceNumber > 0;
+        System.out.println("Quantity of positive numbers = " + positiveNumbersCounter);
     }
 }

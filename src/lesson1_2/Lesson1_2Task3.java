@@ -14,13 +14,13 @@ public class Lesson1_2Task3 {
 
     public static void main(String[] args) {
         System.out.print("Enter the number: ");
-        int numberForCheck = scanner.nextInt();
+        int checkNumber = scanner.nextInt();
 
-        if (numberForCheck > 0)
-            System.out.println(numberForCheck + " + 1 = " + (numberForCheck + 1));
-        else if (numberForCheck < 0)
-            System.out.println(numberForCheck + " - 2 = " + (numberForCheck - 2));
+        if (checkNumber > 0)
+            System.out.println(checkNumber + " + 1 = " + (checkNumber + 1));
+        else if (checkNumber < 0)
+            System.out.println(checkNumber + " - 2 = " + (checkNumber - 2));
         else
-            System.out.println(numberForCheck + " -> " + 10);
+            System.out.println(checkNumber + " -> " + 10);
     }
 }

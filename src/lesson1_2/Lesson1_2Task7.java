@@ -17,18 +17,18 @@ public class Lesson1_2Task7 {
 
     public static void main(String[] args) {
         System.out.print("Enter number of programmers = ");
-        int numberOfProgrammers = scanner.nextInt();
+        int programmersNumber = scanner.nextInt();
 
         String baseZeroOrMany = "ов";
         String baseOne = "программист";
         String baseTwoToFour = "а";
 
-            if (numberOfProgrammers % 10 == 1 && numberOfProgrammers % 100 != 11)
-                System.out.println(numberOfProgrammers + " = " + baseOne);
-            else if ((numberOfProgrammers % 10 == 2 || numberOfProgrammers % 10 == 3 || numberOfProgrammers % 10 == 4) &&
-                    (numberOfProgrammers % 100 != 12 && numberOfProgrammers % 100 != 13 && numberOfProgrammers % 100 != 14))
-                System.out.println(numberOfProgrammers + " = " + baseOne + baseTwoToFour);
+            if (programmersNumber % 10 == 1 && programmersNumber % 100 != 11)
+                System.out.println(programmersNumber + " = " + baseOne);
+            else if ((programmersNumber % 10 == 2 || programmersNumber % 10 == 3 || programmersNumber % 10 == 4) &&
+                    (programmersNumber % 100 != 12 && programmersNumber % 100 != 13 && programmersNumber % 100 != 14))
+                System.out.println(programmersNumber + " = " + baseOne + baseTwoToFour);
             else
-                System.out.println(numberOfProgrammers + " = " + baseOne + baseZeroOrMany);
+                System.out.println(programmersNumber + " = " + baseOne + baseZeroOrMany);
     }
 }

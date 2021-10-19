@@ -8,40 +8,30 @@ import java.util.Scanner;
  */
 
 public class Lesson1_2Task5 {
-
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int[] numbersForCheck = new int[3];
+        int[] checkNumbers = new int[3];
 
         System.out.print("Enter 3 numbers:\nFirst number = ");
-        numbersForCheck[0] = scanner.nextInt();
+        checkNumbers[0] = scanner.nextInt();
         System.out.print("Second number = ");
-        numbersForCheck[1] = scanner.nextInt();
+        checkNumbers[1] = scanner.nextInt();
         System.out.print("Third number = ");
-        numbersForCheck[2] = scanner.nextInt();
+        checkNumbers[2] = scanner.nextInt();
 
         int positiveNumbers = 0,
             negativeNumbers = 0;
 
-        for (int i : numbersForCheck) {
-            if (isPositive(i)) {
+        for (int i : checkNumbers) {
+            if (i > 0) {
                 positiveNumbers++;
             }
-            else if (isNegative(i)) {
+            else if (i != 0) {
                 negativeNumbers++;
             }
         }
-
         System.out.println("Positive numbers = " + positiveNumbers +
                 "\nNegative numbers = " + negativeNumbers);
-    }
-
-    private static boolean isPositive(int sourceNumber) {
-        return sourceNumber > 0;
-    }
-
-    private static boolean isNegative(int sourceNumber) {
-        return sourceNumber < 0;
     }
 }
