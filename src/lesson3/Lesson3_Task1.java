@@ -29,8 +29,8 @@ public class Lesson3_Task1 {
             case 3 -> computerActions(computerOnlyLifecycles);
             case 4 -> computerActions(computerEmpty);
         }
-
     }
+
      static void computerActions(Computer computer){
         boolean breaker = true;
         int userAction;
@@ -57,6 +57,7 @@ public class Lesson3_Task1 {
             }
         }
      }
+
     static int checkInputNumber(String inputString) {
         int result = 0;
 
@@ -71,6 +72,4 @@ public class Lesson3_Task1 {
 
         return result;
     }
-
-
 }
